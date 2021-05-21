@@ -1,25 +1,14 @@
-# Configuration for Prevent-Public-Repos
+# Configuration for Create Issue Upon Repo Creation
 
-# Turn on Monitor Mode. In this mode the repo visibility is not modified and only an Issue is created
-monitorOnly: true
 
-# Enables detection of repos that change visibility from private to public (not just newly created ones)
-enablePrivateToPublic: true
+# Enables the creation of an issue when a new repository is created
+enableIssueCreation: true
 
-# Issue Title when repo is privatized
-privatizedIssueTitle: '[CRITICAL] Public Repositories are Disabled for this Org'
+# Issue Title when a repository is created
+createdIssueTitle: 'Repository Setup First Steps'
 
-# Issue Body when repo is privatized
-privatizedIssueBody: 'NOTE: Public Repos are disabled for this organization! Repository was automatically converted to a Private Repo. Please contact an admin to override.'
-
-# Issue Title when monitor mode is enabled
-monitorIssueTitle: '[CRITICAL] Public Repository Created'
-
-# Issue Body when monitor mode is enable
-monitorIssueBody: 'Please note that this repository is publicly visible to the internet!'
+# Issue Body when a repository is created
+createdIssueBody: 'Congratulations! You\'ve just created a new repository. Please complete the following tasks to make sure that your work can be seen and discoverable by other members of the organization:\n- [ ] Give @[YOUR_ORG_NAME]/[YOUR_TEAM_NAME] at least read access\n- [ ] Add some [topics](https://blog.github.com/2017-01-31-introducing-topics/) that describe the content and purpose of your repository'
 
 # Users/Groups that should be cc'ed on the issue. Should be users/groups separated by a space.
 # ccList: '@user123 @user456'
-
-# Repos to  exclude in detection. Should be a List of Strings.
-# excludeRepos: ['repo1', 'repo2']
